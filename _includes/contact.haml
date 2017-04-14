@@ -1,0 +1,23 @@
+#contact.page
+  .verticalline
+    .scrollprevnext
+  .pageheader
+    %h3
+      %span> C
+      ontact
+  .content
+    %h5 Get In Touch
+    #contactform
+      #response
+      %form.form{action: "https://formspree.io/len@thewrc.ca", method: "POST"}
+        #main
+          %p.name
+            %label{for: "name"} Name
+            %input#name{name: "name", type: "text"}/
+          %p.email
+            %label{for: "_replyto"} E-mail
+            %input#email{name: "_replyto", type: "text"}/
+          %p.text
+            %textarea#comments{name: "comments"}
+          %p.submit
+            %button#submit{name: "submit", type: "submit"} Send

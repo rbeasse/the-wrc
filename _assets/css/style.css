@@ -1,0 +1,370 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  line-height: 16px;
+  text-align: justify;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #0e0e0e url(../images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+img {
+  text-decoration: none;
+  border: none;
+}
+
+/* TYPOGRAPHY ======================================================================*/
+h3 {
+  font-size: 24px;
+  line-height: 35px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  font-weight: normal;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+a:link {
+  color: #0763c1;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0763c1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2ec5f9;
+  text-decoration: none;
+}
+
+a:active {
+  color: #0000FF;
+}
+
+
+/* GENERAL LAYOUT ======================================================================*/
+#wrapper {
+  width: 1024px;
+  height: 392px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -196px 0 0 -512px;
+  padding: 0;
+  background: url(../images/dropshadow.png) no-repeat center center;
+}
+
+#innerleft {
+  width: 480px;
+  height: 360px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 31px;
+  top: 0;
+  font-size: 14px;
+  color: #a1a0a0;
+  background: #0e0e0e url(../images/left-bg.jpg) no-repeat center center;
+}
+
+#innerright {
+  width: 480px;
+  height: 360px;
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 511px;
+  top: 0;
+  background: #f4f2f2 url(../images/right-bg.jpg) no-repeat center center;
+  font-size: 12px;
+  color: #666;
+  text-shadow: 1px 1px #ffffff;
+}
+
+/* LEFT PANE ======================================================================*/
+#header {
+  width: 440px;
+  height: 72px;
+  text-align: center;
+  margin: 0;
+  padding: 30px 20px 10px 20px;
+}
+
+#mainslide {
+  width: 479px;
+  height: 133px;
+  overflow: hidden;
+}
+
+#mainimglight {
+  width: 480px;
+  height: 133px;
+  position: absolute;
+  left: 0;
+  top: 112px;
+  z-index: 200;
+}
+
+/* NAVIGATION ======================================================================*/
+#nav {
+  margin: 28px 58px;
+}
+
+#nav li {
+  float: left;
+  list-style: none;
+}
+
+#nav li a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: #a1a0a0;
+}
+
+#nav li a:hover {
+  text-decoration: underline;
+}
+
+#nav li a:active {
+  font-family: inherit;
+  font-size: inherit;
+  color: #fff;
+}
+
+.js .page {
+  height: 460px;
+}
+
+/* RIGHT PANE GENERAL LAYOUT ======================================================================*/
+.page {
+  width: 480px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.page a img {
+  text-decoration: none;
+  border: 0 none;
+}
+
+.page a:hover img,
+#card a:hover img {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+#home,
+#about,
+#resume,
+#portfolio,
+#contact {
+  position: static;
+}
+
+.secondaryslide {
+  display: none;
+}
+
+/* LAYOUT WHEN JAVASCRIPT ENABLED ======================================================================*/
+.js #innerright {
+  overflow: hidden;
+}
+
+.js .secondaryslide {
+  display: block;
+}
+
+.js .verticalline {
+  display: block;
+  width: 2px;
+  height: 216px;
+  position: absolute;
+  left: 93px;
+  top: 93px;
+  background-color: #e7e4e4;
+  overflow: visible;
+}
+
+.js .scrollprevnext {
+  width: 16px;
+  height: 37px;
+  position: absolute;
+  bottom: 0;
+  left: -7px;
+  background: url(../images/scrollprevnext.png) no-repeat center bottom;
+}
+
+.js #home {
+  position: absolute;
+  left: 0px;
+  top: 0x;
+  z-index: 11;
+}
+
+.js #about {
+  position: absolute;
+  left: 500px;
+  top: 0;
+}
+
+.js #resume {
+  position: absolute;
+  left: 1000px;
+  top: 0;
+}
+
+.js #contact {
+  position: absolute;
+  left: 1500px;
+  top: 0;
+}
+
+/* PAGEHEADING AND PAGER LAYOUT ======================================================================*/
+.pageheader {
+  position: relative;
+  color: #ffffff;
+  left: 63px;
+  width: 64px;
+  height: 77px;
+  margin: 0 0 -47px 0;
+  padding: 18px 0 0 0;
+  text-align: center;
+  text-shadow: 1px 1px #454545;
+  z-index: 11;
+  background-color: #444444;
+  border-bottom: 1px dashed #e7e4e4;
+  border-top: 2px solid #555555;
+}
+
+.verticalline {
+  display: none;
+}
+
+.pageheader h3 span {
+  display: block;
+  font-size: 48px;
+  line-height: 35px;
+  margin: 0;
+  padding: 0 0 0 0;
+  font-weight: normal;
+  color: #FFF;
+  position: relative;
+  font-style: normal;
+}
+
+.pageheader h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: oblique;
+  color: #FFF;
+}
+
+.bx-pager {
+  position: absolute;
+  left: 190px;
+  bottom: -6px;
+  z-index: 11;
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+}
+
+.bx-next {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 87px;
+  bottom: 29px;
+  z-index: 10;
+}
+
+.bx-prev {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 87px;
+  bottom: 50px;
+  z-index: 10;
+}
+
+/* CONTENT LAYOUT ======================================================================*/
+.content {
+  position: relative;
+  width: 276px;
+  height: 286px;
+  position: relative;
+  padding: 0 0 0 141px;
+  overflow: hidden;
+}
+
+.content p,
+.content h4,
+.content h5 {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+/* HOME PAGE SPECIFIC ======================================================================*/
+.welcomeslide {
+  text-align: center;
+  width: 480px;
+  padding: 110px 0 0 0;
+  height: 360px;
+  font-size: 14px;
+  color: #2c2c2c;
+}
+
+/* CONTACT SPECIFIC ======================================================================*/
+
+#contactform {
+  position: relative;
+  top: 5px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+input#name,
+input#email,
+textarea#comments {
+  padding: 4px;
+  margin: 0;
+  border: solid 1px #cdcccc;
+  outline: 0;
+  font: inherit;
+  width: 265px;
+  max-width: 265px;
+}
+
+#contactform textarea {
+  height: 97px;
+  max-height: 97px;
+  margin: 0;
+}

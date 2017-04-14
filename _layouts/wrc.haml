@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=utf-8", httpequiv: "Content-Type"}/
+    %title {{ page.title }}
+    %link{href: "assets/css/style.css", rel: "stylesheet", type: "text/css"}/
+  
+  %body
+    #wrapper
+      #innerleft
+        #header
+          %img{alt: "logo", height: "63", src: "assets/images/logo.png", width: "147"}/
+        #mainslide
+          %img{alt: "", height: "321", src: "assets/images/slides/1.jpg", width: "480"}/
+        #mainimglight
+          %img{alt: "", height: "133", src: "assets/images/imagelight.png", width: "480"}/
+
+        %ul#nav
+          %li
+            %a{href: "#home"} Home
+          %li
+            %a{href: "#about"} About
+          %li
+            %a{href: "#resume"} Services
+          %li
+            %a{href: "#contact"} Contact
+      
+      #innerright
+        {% haml home.haml %}
+        {% haml about.haml %}
+        {% haml resume.haml %}
+        {% haml contact.haml %}
+  
+  %script{src: "assets/js/application.js"}

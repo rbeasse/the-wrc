@@ -341,6 +341,10 @@ a:active {
   color: #2c2c2c;
 }
 
+.welcomeslide h3 {
+  font-family: 'Georgia','Times', serif;
+}
+
 /* CONTACT SPECIFIC ======================================================================*/
 
 #contactform {

@@ -1,20 +1,5 @@
 markdown: kramdown
 
-assets:
-  sources:
-    - _assets
-  compression: true
-  digest: false
-
-  sources:
-    - _assets
-
-  compress:
-    js:  true
-
-plugins:
-  - jekyll-assets
-
 exclude:
   - Gemfile
   - Gemfile.lock
